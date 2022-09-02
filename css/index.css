@@ -1,0 +1,293 @@
+/********************* Homepage body and main containers **************************/
+/*Paul Nhlapo u18108378*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+body {
+	padding-left: 1em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: rgb(255, 255, 255);
+	background-color: rgb(42, 0, 156);
+	background-image: url("https://cdn.pixabay.com/photo/2019/01/06/00/11/blue-3916210_960_720.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	font-family: 'Open+Sans' +bold;
+	color: white;
+	line-height: 1.8;
+	
+}
+
+.main_container {
+	width: 100%;
+	overflow: auto;
+	margin-top: 53px;
+}
+
+.centered_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+/***************************** Top navbar ********************************/
+#navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/* background-color: rgba(69, 33, 33, 0.393); */
+	background-color: rgba(0, 0, 0, 0.824);
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 48px;
+}
+
+.active_link {
+	background-color: rgba(50, 50, 96, 0.903);
+	color: white;
+}
+
+#navbar li {
+	float: left;
+}
+
+#navbar li a {
+	display: block;
+	color: rgb(81, 230, 210);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar li :hover {
+	background-color: rgb(38, 38, 64);
+}
+
+#login_btns {
+	float: right;
+	margin: 0;
+}
+
+#navbar li #btnLogin,
+#navbar li #btnSignup,
+#navbar li #btnLogout {
+	/* border-width: thin;
+	border-style: solid; */
+	padding: 12px;
+	background-color:rgb(38, 38, 64);
+}
+
+#navbar #btnLogin:hover,
+#navbar #btnSignup:hover,
+#navbar #btnLogout:hover {
+	background-color: rgba(221, 15, 35, 0.722);
+	cursor: pointer;
+}
+
+#navbar li a#username_text:hover {
+	background-color: rgb(38, 38, 64);
+	cursor: default;
+}
+
+.flashing {
+	animation: flashing 1s linear 0s 3;
+}
+
+@keyframes flashing {
+	0% {
+		background-color: #333;
+	}
+	50% {
+		background-color: #535151;
+	}
+	100% {
+		background-color: #333;
+	}
+}
+
+/***************************** Signup & Login pages *****************************/
+#frmSignup,
+#frmLogin,
+#frmVenue,
+#frmTeam,
+#frmAthlete {
+	width: 650px;
+	margin-top: 80px;
+}
+
+#frmSignup legend,
+#frmLogin legend,
+#frmVenue legend,
+#frmTeam legend,
+#frmAthlete legend{
+	font-size: 32px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.frmLabel {
+	text-align: right;
+	width: 285px;
+	float: left;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.frmInp {
+	width: 300px;
+	float: left;
+	height: 28px;
+	font-size: 23px;
+	background-color: rgba(51, 51, 51, 0.46);
+	color: white;
+	border-radius: 8px;
+}
+
+.frmInp.chk {
+	width: 30px;
+}
+
+#frmSignup p,
+#frmLogin p,
+#frmVenue p,
+#frmTeam p,
+#frmAthlete p {
+	clear: both;
+	padding: 20px;
+}
+
+#frmSignup #lblError,
+#frmLogin #lblError,
+#frmVenue #lblError,
+#frmTeam #lblError,
+#frmAthlete #lblError {
+	color: red;
+	padding: 0;
+	overflow: auto;
+	text-align: center;
+	height: 1.2em;
+	width: auto;
+	background-color: black;
+	border-radius: 10px;
+}
+
+.frmSub {
+	font-size: 25px;
+	border-radius: 8px;
+	background-color: rgba(51, 51, 51, 0.756);
+	color: rgb(81, 230, 210);
+	margin-top: 28px;
+}
+.frmSub:hover{
+	background-color: rgb(51, 51, 51);
+	color: red;
+}
+
+.registration_redirect {
+	text-decoration: underline;
+	font-size: 22px;
+	color: white;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.registration_redirect:hover {
+	color:rgb(81, 230, 210);
+	
+}
+
+#login_error {
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	flex-direction: column;
+	text-align: center;
+	display: inline;
+	margin-top: 0;
+}
+
+/***************************** Venues page *****************************/
+#head_container {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+#selVenuesSort,
+#selTeamsSort,
+#selAthletesSort {
+	width: 12em;
+}
+
+#btnAddVenue,
+#btnAddTeam,
+#btnAddAthlete{
+	background-color: rgba(51, 51, 51, 0.671);
+	color: rgb(81, 230, 210);
+	border-radius: 8px;
+	margin-left: 30em;
+	font-size: 15pt;
+	margin-bottom: 10px;
+}
+
+#btnAddVenue:hover,
+#btnAddTeam:hover,
+#btnAddAthlete:hover {
+	background-color:rgb(38, 38, 64);
+	cursor: pointer;
+}
+
+#tblVenues,
+#tblTeams,
+#tblAthletes,
+#tblStats {
+	/* color: white; */
+	color:rgba(81, 230, 210, 0.774);
+	background-color:rgba(0, 0, 0, 0.824);
+	border-collapse: collapse;
+	width: 80%;
+}
+
+#tblVenues td,
+#tblVenues th,
+#tblTeams td,
+#tblTeams th,
+#tblAthletes td,
+#tblAthletes th,
+#tblStats td,
+#tblStats th {
+	padding: 8px;
+	text-align: center;
+	border-bottom: 1px solid rgb(81, 230, 210);
+	border: 1px solid rgb(81, 230, 210);
+}
+
+#tblVenues tr:hover,
+#tblTeams tr:hover,
+#tblAthletes tr:hover,
+#tblStats tr:hover{
+	background-color: rgb(38, 38, 64);
+}
+
+.venue_redirect,
+.team_redirect,
+.athlete_redirect  {
+	text-decoration: underline;
+	font-size: 22px;
+	color: white;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.venue_redirect:hover,
+.team_redirect:hover,
+.athlete_redirect:hover{
+	color: red;
+}
